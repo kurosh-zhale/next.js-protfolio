@@ -34,7 +34,7 @@ export default function Header() {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m Kourosh, a Next.js Developer based in Austria.
+            Hi! I&apos;m Kourosh, a Next.js Developer based in Austria.
           </p>
 
           <Link href="/about">
