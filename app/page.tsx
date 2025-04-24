@@ -1,7 +1,5 @@
 import Hero from "@/components/hero";
 
-type TestType = { title: string; content: string; id: `item-${number}` };
-
 export default async function Home() {
   return (
     <>
@@ -11,7 +9,7 @@ export default async function Home() {
        overflow-hidden mx-auto sm:px-10 px-5"
       >
         <div className="max-w-7xl w-full">
-          <Hero />
+          <Hero/>
         </div>
       </main>
     </>

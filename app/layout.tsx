@@ -1,12 +1,6 @@
-import DeployButton from "@/components/deploy-button";
-import { EnvVarWarning } from "@/components/env-var-warning";
-import HeaderAuth from "@/components/header-auth";
-import { ThemeSwitcher } from "@/components/theme-switcher";
-import { hasEnvVars } from "@/utils/supabase/check-env-vars";
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "next-themes";
-import Link from "next/link";
 import "./globals.css";
+import { ThemeProvider } from "./theme-provider";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -19,7 +13,7 @@ export const metadata = {
     "This website serves as a simple demonstration of the projects I've previously worked on",
 };
 
-const inter = Inter({subsets:['latin']});
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -28,8 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="bg-background text-foreground">
-        {children}
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
