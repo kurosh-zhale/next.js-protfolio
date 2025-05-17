@@ -1,4 +1,5 @@
 import Hero from "@/components/hero";
+import ProjectsGrid from "@/components/projects-grid";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { FaHome } from "react-icons/fa";
 
@@ -42,6 +43,7 @@ export default async function Home() {
         <div className="max-w-7xl w-full">
           <FloatingNav navItems={navItems} />
           <Hero />
+          <ProjectsGrid></ProjectsGrid>
         </div>
       </main>
     </>

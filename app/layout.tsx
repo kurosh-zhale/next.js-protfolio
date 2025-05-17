@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
+import { HeroUIProvider } from "@heroui/react";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -29,7 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <HeroUIProvider>{children}</HeroUIProvider>
         </ThemeProvider>
       </body>
     </html>
