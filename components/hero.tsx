@@ -37,7 +37,7 @@ export default function Header() {
             Hi! I&apos;m Kourosh, a Next.js Developer based in Austria.
           </p>
 
-          <Link href="/about">
+          <Link href="#about">
             <MagicButton
               title="see my work"
               icon={<FaLocationArrow />}
