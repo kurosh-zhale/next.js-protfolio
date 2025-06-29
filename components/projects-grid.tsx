@@ -25,13 +25,13 @@ const ProjectsGrid = async () => {
   if (error) {
     console.error(error);
 
-    return <p id="about">Unable to fetch projects!</p>;
+    return <p id="projects">Unable to fetch projects!</p>;
   }
 
   const onClickAlert = () => {};
 
   return (
-    <section id="about" className="mt-20">
+    <section id="projects" className="mt-20">
       <TextGenerateEffect
         words="A small selection of recent projects"
         className="text-center text-[30px] md:text-4xl lg:text-5xl mb-12"
